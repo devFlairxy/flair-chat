@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "food-by-tems",
-    "slug": "food-by-tems",
+    "name": "chat-app",
+    "slug": "chat-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "chat-app",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
