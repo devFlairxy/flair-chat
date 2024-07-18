@@ -13,7 +13,9 @@ const ChatProvider = ({ children }: PropsWithChildren) => {
   const { profile } = useAuth();
   useEffect(() => {
     if (!profile) return;
-    const { data } = supabase.storage.from('avatar').getPublicUrl(profile.avatar_url)
+    const { data } = supabase.storage
+      .from('avatar')
+      .getPublicUrl(profile.avatar_url);
     const connect = async () => {
       await client.connectUser(
         {
@@ -24,10 +26,6 @@ const ChatProvider = ({ children }: PropsWithChildren) => {
         client.devToken(profile.id)
       );
       setIsReady(true);
-      // const channel = client.channel('messaging', 'the_park', {
-      //   name: 'The Park',
-      // });
-      // await channel.watch();
     };
     connect();
     return () => {
